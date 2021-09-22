@@ -39,8 +39,8 @@ fgp.add_child(folium.GeoJson(data=open("world.json", 'r', encoding='utf-8-sig').
 style_function=lambda x:( {'fillColor':'green' if x['properties']['POP2005']< 50000000
 else 'orange' if 5000000 <= x['properties']['POP2005'] < 200000000 else 'red'})))
 
-map.add_child(fgv)
 map.add_child(fgp)
+map.add_child(fgv)
 map.add_child(folium.LayerControl())    #creates layer control for volcano and population layers
 
 map.save("Interactive_World_Map.html")
