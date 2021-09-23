@@ -41,6 +41,7 @@ else 'orange' if 5000000 <= x['properties']['POP2005'] < 200000000 else 'red'}))
 
 map.add_child(fgp)
 map.add_child(fgv)
+map.keep_in_front(fgv)
 map.add_child(folium.LayerControl())    #creates layer control for volcano and population layers
 
 map.save("Interactive_World_Map.html")
